@@ -5,7 +5,7 @@ This repo implements a control algorithm based on Lyapunov optimization [[Ref. 1
 We provide a sample data file here for illustration purpose. This data file is from a commercial building but scaled for confidential considerations. It has a time interval of 1 second and covers solar powers and building loads from 05/31/2022 to 06/01/2022.
 
 To run:
-- Run ```simulation.ipynb``` to obtain optimized loads with BESS
+- Run ```simulation.ipynb``` to obtain optimized loads with BESS (the default data is in 1-second intervals)
 - Run ```post1-get-15min-loads.ipynb``` to obtain aggregated 15-min loads w/ and w/o BESS.
 - Run ```post2-cost-audit.ipynb``` to get energy/demand charges and total costs w/ and w/o BESS.
 
