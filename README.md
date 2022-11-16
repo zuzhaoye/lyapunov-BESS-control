@@ -25,9 +25,9 @@ If we replace $[d(t_a) - c(t_a)]$ with a single variable $x$, the above optimiza
 
 - $x = P_{max}$, right boundary.
 - $x = P_{min}$, left boundary.
-- $x = 0$, a transition point because of the $|x|$ in (26a).
-- $x = P_G(t_a)$,  a transition point because of the $max(P_G(t_a), 0)$ and $min(P_G(t_a), 0)$ in (26b).
-- $x = P_G(t_a) - M(t_a)$,  a transition point because of the $max(P_G(t_a) - M(t_a), 0)$ in (26b).
+- $x = 0$, a transition point due to the term $|x|$ in (26a).
+- $x = P_G(t_a)$,  a transition point due to the terms $max(P_G(t_a), 0)$ and $min(P_G(t_a), 0)$ in (26b).
+- $x = P_G(t_a) - M(t_a)$,  a transition point due to the term $max(P_G(t_a) - M(t_a), 0)$ in (26b).
 
 ## Implementation
 The algorithm is implemented in ```lo_step.py```. It compares the objective values evaluated at the 5 points stated above and selects the best one as the output of the BESS. ```lo_step.py``` has the following inputs and outputs:
@@ -57,7 +57,7 @@ Another important aspect of the simulation is the determination of the prices at
 </figure>
 
 ### Energy charge
-The energy charge varies by season and hour of the day. See settings.py and [[Ref. 3]](https://www.sdge.com/sites/default/files/regulatory/Summary%20Table%20for%20Large%20Comm%206-1-22%20w%20PCIA.pdf) for detailed information on energy charges.
+The energy charge varies by season and hour of the day. See ```settings.py``` and [[Ref. 3]](https://www.sdge.com/sites/default/files/regulatory/Summary%20Table%20for%20Large%20Comm%206-1-22%20w%20PCIA.pdf) for detailed information on energy charges.
 
 ### Demand charge
 According to SDGE, there are three types of demand charges: Non-coincident, On-peak, and Generation [[Ref. 4]](https://www.sdge.com/businesses/pricing-plans/understanding-demand). Each type of demand charge compensates for different aspects of the operation costs. During off-peak hours, the total effective demand charge is the sum of Non-coincident and Generation demand charges, while during on-peak hours, the total effective demand charge is the sum of all three types of demand charges.
