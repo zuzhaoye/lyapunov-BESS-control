@@ -5,9 +5,9 @@ This repo implements a control algorithm based on Lyapunov optimization [[Ref. 1
 We provide a sample data file here for illustration purpose. This data file is from a commercial building but scaled for confidential considerations. It has a time interval of 1 second and covers solar powers and building loads from 05/31/2022 to 06/01/2022.
 
 To run:
-- Run ```simulation.ipynb``` to obtain optimized loads with BESS (the default data is in 1-second intervals)
-- Run ```post1-get-15min-loads.ipynb``` to obtain aggregated 15-min loads w/ and w/o BESS.
-- Run ```post2-cost-audit.ipynb``` to get energy/demand charges and total costs w/ and w/o BESS.
+- Run ```Simulation.ipynb``` to obtain optimized loads with BESS (the default data is in 1-second intervals)
+- Run ```PostAnalysis1-get-15min-loads.ipynb``` to obtain aggregated 15-min loads w/ and w/o BESS.
+- Run ```PostAnalysis2-cost-audit.ipynb``` to get energy/demand charges and total costs w/ and w/o BESS.
 
 ## Theoretical Background
 
@@ -64,7 +64,7 @@ According to SDGE, there are three types of demand charges: Non-coincident, On-p
 
 ## Load Aggregation
 
-```post1-get-15min-loads.ipynb```
+```PostAnalysis1-get-15min-loads.ipynb```
 
 Since utility companies usually calculate the bills based on 15-minute intervals, it is necessary to aggregate the original data in 1-second intervals (or whatever other intervals) into 15-min intervals before we calculate the bills w/o or w/ BESS.
 
@@ -72,7 +72,7 @@ The function module creates contiguous 15-min time intervals starting from the D
 
 ## Cost Audit
 
-```post2-cost-audit.ipynb```
+```PostAnalysis2-cost-audit.ipynb```
 
 The cost audit process is very similar to the simulation process. The only difference is the time interval of data. The energy charge, demand charge, and total costs will be reported through this module.
 
